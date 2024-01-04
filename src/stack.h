@@ -35,6 +35,9 @@ namespace stack{
             // getter methods
             float top(){return tail_->value();}
             int size(){return size_;}
+            // addition opperators
+            Stack operator+(float val);
+            void operator+=(float val);
 
     };
 }

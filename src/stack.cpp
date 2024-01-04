@@ -24,6 +24,17 @@ void Node::setValue(float value){
     value_ = value;
 }
 
+// creates a deep copy of the stack
+Stack Stack::copy(){
+    Stack stack;
+    Node *current = head_;
+    while(current){
+        stack.push(current->value());
+        current = current->next();
+    }
+    return stack;
+}
+
 // append a new node of a given value on the stack
 void Stack::push(float value){
     size_++;

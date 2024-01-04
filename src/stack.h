@@ -28,6 +28,7 @@ namespace stack{
             Node *tail_;
         public:
             Stack() : size_(0), head_(nullptr), tail_(nullptr) {};
+            Stack copy();
             void push(float val);
             float pop();
             bool isEmpty();

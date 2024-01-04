@@ -70,3 +70,15 @@ bool Stack::isEmpty(){
     return size_ == 0;
 }
 
+// creates a copy of the stack and and pushes the operand onto it
+Stack Stack::operator+(float value){
+    Stack tmp = copy();
+    tmp.push(value);
+    return tmp;
+}
+
+// calls the push method with a constructor
+void Stack::operator+=(float value){
+    push(value);
+}
+

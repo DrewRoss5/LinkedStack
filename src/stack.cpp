@@ -33,7 +33,7 @@ void Stack::push(float value){
         if (tmp)
             tmp->setNext(tail_);
         else
-            tail_->setPrev(head_);
+            head_->setNext(tail_);
     }
     else{
         head_ = new Node(value);

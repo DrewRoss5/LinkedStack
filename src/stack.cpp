@@ -27,11 +27,17 @@ void Node::setValue(float value){
 // append a new node of a given value on the stack
 void Stack::push(float value){
     size_++;
-    Node* tmp = tail_;
-    tail_ = new Node(value);
-    tail_->setPrev(head_);
-    if (tmp)
-        tmp->setNext(tail_);
+    if (head_){
+        Node* tmp = tail_;
+        tail_ = new Node(value);
+        if (tmp)
+            tmp->setNext(tail_);
+        else
+            tail_->setPrev(head_);
+    }
+    else{
+        head_ = new Node(value);
+    }
 }
 
 // pop the tail from the top of the stack and delete it

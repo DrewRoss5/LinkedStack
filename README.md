@@ -32,8 +32,10 @@ The number of Nodes in the stack.<br>
 ### Public Methods:
 **`Stack()`:**<br>
 Constructs a stack with `head_` and `foot_` assigned to `nullptr` and of size 0.<br>
+**`Stack copy()`:**<br>
+Creates a deep copy of the stack with independently managed memory. <br>
 **``void push(float value)``:**<br>
-Constructs a node of with provided value and sets it to head of the stck.<br>
+Constructs a node of the provided value and sets it to the head of the stack.<br>
 **`float pop(float value)`:**<br>
 Deletes the top node on the stack and returns its value. <br>
 **`bool isEmpty()`:**<br>

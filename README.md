@@ -42,7 +42,7 @@ Deletes the top node on the stack and returns its value. <br>
 Returns `true` if there are no Nodes on the stack, otherwise returns `false`.<br>
 **`float top()`:**<br>
 Returns the value of the top Node on the stack without deleting it.<br>
-**void clear():**<br>
+**`void clear():`**<br>
 Deletes all nodes in the stack, freeing the associated memory
 
 

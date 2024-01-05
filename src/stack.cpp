@@ -65,6 +65,12 @@ float Stack::pop(){
 
 }
 
+// deletes all nodes in the stack
+void Stack::clear(){
+    while (!isEmpty())
+        pop();
+}
+
 // returns if the node is empty
 bool Stack::isEmpty(){
     return size_ == 0;

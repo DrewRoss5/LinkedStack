@@ -39,6 +39,8 @@ class Stack{
         // addition opperators
         Stack<T> operator+(T val);
         void operator+=(T val);
+        // deconstructor
+        ~Stack();
 
 };
 

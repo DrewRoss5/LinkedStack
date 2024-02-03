@@ -79,8 +79,21 @@ bool Stack<T>::isEmpty(){
 template<typename T>
 void Stack<T>::clear(){
     while (!isEmpty())
-        pop();
+    pop();
 }
+
+// deconstructor for the class
+template<typename T>
+Stack<T>::~Stack(){
+    Node<T>  *current = head_;
+    Node<T>  *tmp = current;
+    while(current){
+        tmp = current->next();
+        delete current;
+        current = tmp;
+    }
+}
+
 
 // creates a copy of the stack and and pushes the operand onto it
 template<typename T>
